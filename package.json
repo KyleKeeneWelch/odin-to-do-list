@@ -1,0 +1,26 @@
+{
+  "name": "odin-to-do-list",
+  "version": "1.0.0",
+  "description": "To-Do List Dependencies",
+  "main": "./src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "server": "node server.js",
+    "build": "webpack"
+  },
+  "author": "Kyle Keene-Welch",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^6.8.1",
+    "date-fns": "^2.30.0",
+    "style-loader": "^3.3.3"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
