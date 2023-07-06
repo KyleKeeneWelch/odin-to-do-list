@@ -6,5 +6,140 @@
     <title>Odin - To-Do List</title>
 <script defer src="main.js"></script></head>
 <body>
+    <main class="main-container">
+        <header>
+            <h1><i class="fa-solid fa-book icon"></i> Agenda</h1>
+        </header>
+
+        <div class="projects-sidebar">
+            <div class="main-projects">
+                <button class="btn-view-project active"><i class="fa-solid fa-calendar icon"></i>Agenda</button>
+                <button class="btn-view-project"><i class="fa-solid fa-calendar-day icon"></i>Today</button>
+                <button class="btn-view-project"><i class="fa-solid fa-calendar-week icon"></i>This Week</button>
+            </div>
+            <div class="generated-projects" id="generated-projects">
+                <h2>Projects</h2>
+            </div>
+            <div class="add-project">
+                <button id="btn-add-project"><i class="fa-solid fa-plus icon"></i></button>
+            </div>
+        </div>
+
+        <div class="tool-bar">
+            <div class="tool-bar-btn">
+                <button id="btn-create-project"><i class="fa-solid fa-calendar-plus icon"></i>Create Project</button>
+            </div>
+            <div class="tool-bar-btn">
+                <button id="btn-create-task"><i class="fa-solid fa-square-plus"></i>Create Task</button>
+            </div>
+            <div class="tool-bar-btn">
+                <button id="btn-create-note"><i class="fa-solid fa-circle-plus"></i>Create Note</button>
+            </div>
+            <div class="tool-bar-btn">
+                <button id="btn-show-tasks"><i class="fa-solid fa-list-check"></i>Hide Tasks</button>
+            </div>
+            <div class="tool-bar-btn">
+                <button id="btn-show-notes"><i class="fa-solid fa-note-sticky"></i>Hide Notes</button>
+            </div>
+        </div>
+
+        <div class="display-project show-tasks show-notes" id="display-project">
+            <h2 id="project-heading"></h2>
+            <div class="display-project-tasks">
+                <h3>Tasks</h3>
+                <div id="project-tasks-grid">
+
+                </div>
+            </div>
+            <div class="display-project-notes">
+                <h3>Notes</h3>
+                <div id="project-notes-grid">
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Kyle Keene-Welch © 2023</p>
+            <a href="https://github.com/KyleKeeneWelch"><i class="fa-brands fa-github icon" aria-hidden="true"></i></a>
+        </footer>
+
+        <div class="modal" id="create-project-modal">
+            <form class="create-project-form" id="create-project-form" action="#" novalidate autocomplete="off">
+                <p>Create Project</p>
+                <br>
+                <div>
+                    <label for="project-name-field">Name</label>
+                    <br>
+                    <input type="text" id="project-name-field" minlength="3" maxlength="200" required placeholder="Enter project name..." autocomplete="off">
+                    <br>
+                    <span id="project-name-error" class="error" aria-live="polite"></span>
+                </div>
+                <br>
+                <div>
+                    <button class="btn-submit-form" type="submit">Create</button>
+                    <button class="btn-cancel-form">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="create-task-modal">
+            <form class="create-task-form" id="create-task-form" action="#" novalidate autocomplete="off">
+                <p>Create Task</p>
+                <br>
+                <div>
+                    <label for="task-name-field">Name</label>
+                    <br>
+                    <input type="text" id="task-name-field" minlength="3" maxlength="200" required placeholder="Enter task name..." autocomplete="off">
+                    <br>
+                    <span id="task-name-error" class="error" aria-live="polite"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="due-date-field">Due Date</label>
+                    <br>
+                    <input type="date" id="due-date-field" required>
+                    <br>
+                    <span id="due-date-error" class="error" aria-live="polite"></span>
+                </div>
+                <br>
+                <div>
+                    <button class="btn-submit-form" type="submit">Create</button>
+                    <button class="btn-cancel-form">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="create-note-modal">
+            <form class="create-note-form" id="create-note-form" action="#" novalidate autocomplete="off">
+                <p>Create Note</p>
+                <br>
+                <div>
+                    <label for="note-title-field">Title</label>
+                    <br>
+                    <input type="text" id="note-title-field" minlength="3" maxlength="200" required placeholder="Enter note title..." autocomplete="off">
+                    <br>
+                    <span id="note-title-error" class="error" aria-live="polite"></span>
+                </div>
+                <br>
+                <div>
+                    <label for="note-content-field">Content</label>
+                    <br>
+                    <textarea id="note-content-field" minlength="3" maxlength="500" required placeholder="Enter note content..." autocomplete="off"></textarea>
+                    <br>
+                    <span id="note-content-error" class="error" aria-live="polite"></span>
+                </div>
+                <br>
+                <div>
+                    <button class="btn-submit-form" type="submit">Create</button>
+                    <button class="btn-cancel-form">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="overlay" id="overlay">
+
+        </div>
+    </main>
 </body>
 </html>
