@@ -12,17 +12,17 @@ export class Storage {
             new ToDoList(), JSON.parse(localStorage.getItem('toDoList'))
         );
 
-        // if (toDoList === null) {
-        //     const newToDoList = new ToDoList();
-        //     const agenda = new Project('Agenda');
-        //     const today = new Project('Today');
-        //     const thisWeek = new Project('This Week');
-        //     newToDoList.addProject(agenda);
-        //     newToDoList.addProject(today);
-        //     newToDoList.addProject(thisWeek);
-        //     this.saveToDoList(newToDoList);
-        //     return newToDoList;
-        // }
+        if (toDoList === null) {
+            const newToDoList = new ToDoList();
+            const agenda = new Project('Agenda');
+            const today = new Project('Today');
+            const thisWeek = new Project('This Week');
+            newToDoList.addProject(agenda);
+            newToDoList.addProject(today);
+            newToDoList.addProject(thisWeek);
+            this.saveToDoList(newToDoList);
+            return newToDoList;
+        }
         
         toDoList.setProjects(
             toDoList.getProjects()
