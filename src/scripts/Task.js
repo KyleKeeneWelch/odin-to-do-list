@@ -29,10 +29,11 @@ export class Task {
         this.status = status;
     }
 
+    // Rearranges due date to be in the date required for imported module.
     getDueDateFormatted() {
-        const day = this.dueDate.split('-')[0];
-        const year = this.dueDate.split('-')[1];
-        const month = this.dueDate.split('-')[2];
+        const day = this.dueDate.split('-')[2];
+        const year = this.dueDate.split('-')[0];
+        const month = this.dueDate.split('-')[1];
         return `${month}-${day}-${year}`;
     }
 }

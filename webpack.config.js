@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    'entry': ['./src/scripts/Project.js', './src/scripts/Storage.js', './src/scripts/Task.js', './src/scripts/ToDoList.js', './src/scripts/display.js'],
+    'entry': ['./src/scripts/Project.js', './src/scripts/Storage.js', './src/scripts/Task.js', './src/scripts/ToDoList.js', './src/scripts/Display.js', './src/scripts/Note.js'],
   },
   devtool: 'inline-source-map',
   plugins: [
