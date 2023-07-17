@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     'entry': ['./src/scripts/Project.js', './src/scripts/Storage.js', './src/scripts/Task.js', './src/scripts/ToDoList.js', './src/scripts/Display.js', './src/scripts/Note.js'],
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval',
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
